@@ -9,7 +9,8 @@ function Fruit(props){
         <div>
 
           <h1 id="fontH1">  {props.name} </h1>
-            <img src={props.img} alt="" />
+            {/* <img src={props.img} alt="" /> */}
+            <h2>{props.emoji}</h2>
             <h4> {props.price}$</h4>
             <h5>{props.color}</h5>
               <span>
