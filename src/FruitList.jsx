@@ -16,11 +16,14 @@ function FruitList(props) {
           img={f.img}
           color={f.color}
           emoji={f.emoji}
-          count={f.count}
-          onCountChange={(count) => {
-            f.count = count
-            props.updateFruitList(props.fruit)
-          }}
+          quantity={f.quantity}
+          onQuantityChange={(newQuantity) =>{
+            const newItem = {...f, quantity: newQuantity}
+            props.onFruitUpdate(newItem)
+          }
+
+          }
+        
         />
       ))}
       </div>
