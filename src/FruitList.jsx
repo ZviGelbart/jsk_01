@@ -21,9 +21,7 @@ function FruitList(props) {
             const newItem = {...f, quantity: newQuantity}
             props.onFruitUpdate(newItem)
           }
-
           }
-        
         />
       ))}
       </div>

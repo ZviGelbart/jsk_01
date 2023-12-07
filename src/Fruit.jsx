@@ -1,11 +1,10 @@
-import { useState } from "react";
 
 function Fruit(props) {
-  const [count, setCount] = useState(props.quantity);
+  
   const handleMinus = () => {
-    if (count != 0) {
-      setCount(count - 1);
-      props.onQuantityChange(count - 1)
+    if (props.quantity != 0) {
+      
+      props.onQuantityChange(props.quantity - 1)
       
     }
   };
@@ -19,8 +18,7 @@ function Fruit(props) {
       <span>
         <button
           onClick={() => {
-            setCount(count + 1);
-            props.onQuantityChange(count + 1);
+            props.onQuantityChange(props.quantity + 1);
           }}
         >
           +
@@ -29,8 +27,8 @@ function Fruit(props) {
 
 
 
-        <span>{count}</span>
-        {count > 0 && <button onClick={handleMinus}>-</button>}
+        <span>{props.quantity}</span>
+        {props.quantity > 0 && <button onClick={handleMinus}>-</button>}
       </span>
     </div>
   );
