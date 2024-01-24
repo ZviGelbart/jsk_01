@@ -22,6 +22,7 @@ function FruitList(props) {
             props.onFruitUpdate(newItem)
           }
           }
+        
         />
       ))}
       </div>

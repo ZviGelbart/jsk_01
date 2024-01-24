@@ -30,7 +30,7 @@ function onFruitUpdate(fruts) {
   const fruitIndex = fruit.findIndex((f) => f.id === fruts.id)
   fruit[fruitIndex] = fruts
   setFruit(fruit)
-  updateCart()
+  updateCart(cart)
 }
 
 
